@@ -1,0 +1,17 @@
+// (cmd shift option r)
+var artboard = [[[doc currentPage] artboards] firstObject];
+horizontalGuideCount = [[artboard horizontalRulerData] numberOfGuides]
+verticalGuideCount = [[artboard verticalRulerData] numberOfGuides]
+
+while (verticalGuideCount > 0) {
+		[[artboard verticalRulerData] removeGuideAtIndex:0]
+		verticalGuideCount = [[artboard verticalRulerData] numberOfGuides]
+		//log(verticalGuideCount)
+}
+
+while (horizontalGuideCount > 0) {
+	[[artboard horizontalRulerData] removeGuideAtIndex:0]
+	horizontalGuideCount = [[artboard horizontalRulerData] numberOfGuides]
+}
+
+[doc showMessage:"All guides removed"]
