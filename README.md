@@ -1,12 +1,15 @@
 SketchPlugins
 =============
 
-A git repo for my Sketch plugins
+A git repo containing various plugins for [Sketch](http://bohemiancoding.com/sketch/).
 
+- - -
 
-## Handy
-Makes adding and removing guides a cinch. Requires an artboard and rulers to be visible.
+### Handy
+![Handy](https://dl.dropboxusercontent.com/u/144234624/Sketch/handy.png)
 
-You can add guides one at a time with `orientation,position` syntax, or multiple guides as space-separated values.
+Handy is a plugin that makes working with guides easier in Sketch. It includes two plugins currently:
+* Add Guide (cmd shift option g): lets you add a vertical or horizontal guide at any point, for example 'v,100' adds a vertical guide at 100px. You can also pass multiple, space-separated values ('v,100 h,200').
+* Remove Guides (cmd shift option r): removes all guides across your artboards.
 
-For example, `v,100` will create a vertical guide at 100px. `v,200 h,200` will create vertical and horizontal guides at 200px. You get the idea.
+Note you need Rulers turned on (Control R) to see guides 
