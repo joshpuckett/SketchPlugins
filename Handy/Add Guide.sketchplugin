@@ -17,6 +17,28 @@ if (!artboard) {
 		var guideOrientation = guide[0]
 		var guidePosition = guide[1]
 
+		// Find any non-number values and assign to its own var
+		var guideMath = guidePosition.split(/[0-9]+/).join('')
+		var guideVals = guidePosition.split(/[^0-9]+/)
+
+		// Check operands and perform calculations
+		if(guideMath != '') {
+			switch(guideMath) {
+	      case '+':
+	        guidePosition = guideVals[0] + guideVals[1];
+	        break;
+	      case '-':
+	        guidePosition = guideVals[0] - guideVals[1];
+	        break;
+	      case '*':
+	        guidePosition = guideVals[0] * guideVals[1];
+	        break;
+	      case '/':
+	        guidePosition = guideVals[0] / guideVals[1];
+					break;
+			}
+		}
+
 		if (guideOrientation == "v") {
 
 			[[artboard verticalRulerData] addGuideWithValue:guidePosition]
