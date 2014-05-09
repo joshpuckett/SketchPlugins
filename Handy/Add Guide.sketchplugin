@@ -24,17 +24,17 @@ if (!artboard) {
 		// Check operands and perform calculations
 		if(guideMath != '') {
 			switch(guideMath) {
-	      case '+':
-	        guidePosition = guideVals[0] + guideVals[1];
-	        break;
-	      case '-':
-	        guidePosition = guideVals[0] - guideVals[1];
-	        break;
-	      case '*':
-	        guidePosition = guideVals[0] * guideVals[1];
-	        break;
-	      case '/':
-	        guidePosition = guideVals[0] / guideVals[1];
+				case '+':
+					guidePosition = guideVals[0] + guideVals[1];
+					break;
+				case '-':
+					guidePosition = guideVals[0] - guideVals[1];
+					break;
+				case '*':
+					guidePosition = guideVals[0] * guideVals[1];
+					break;
+				case '/':
+					guidePosition = guideVals[0] / guideVals[1];
 					break;
 			}
 		}
