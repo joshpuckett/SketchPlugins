@@ -13,3 +13,6 @@ Handy is a plugin that makes working with guides easier in Sketch. It includes t
 * Remove Guides (cmd shift option r): removes all guides across your artboards.
 
 Note you need Rulers turned on (Control R) to see guides 
+
+### Save Page to PNG
+Hit (Command + Option + Control + E) to save your entire page to a single PNG, in the same directory as your sketch file. This is super useful if you want to show all of your artboards at once.
