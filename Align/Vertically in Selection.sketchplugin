@@ -1,0 +1,13 @@
+// (cmd option control v)
+if([selection count] == 0){
+  [doc showMessage:"Please select 2 or more layers"]
+} else {
+	targetLayer = [selection objectAtIndex:0]
+	targetFrame = [targetLayer frame]
+	targetMidY = [targetFrame midY]
+	for (var i=1; i < [selection count]; i++){
+  	layer = [selection objectAtIndex:i]
+  	frame = [layer frame]
+  	[frame setMidY:targetMidY]
+	}
+}
