@@ -10,7 +10,7 @@ Allows you to align layers inside another layer. This doesn't move the bottom se
 
 * __Both in Selection__ (cmd option control x): aligns selected layers vertically and horizontally to the bottom most selected layer
 * __Horizontally in Selection__ (cmd option control h): aligns selected layers horizontally to the bottom most selected layer
-* __Vertically in Selection__ (cmd option control h): aligns selected layers vertically to the bottom most selected layer
+* __Vertically in Selection__ (cmd option control v): aligns selected layers vertically to the bottom most selected layer
 
 ### Save Page to PNG
 Hit (Command + Option + Control + E) to save your entire page to a single PNG, in the same directory as your sketch file. This is super useful if you want to show all of your artboards at once.
