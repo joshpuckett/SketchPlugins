@@ -3,7 +3,10 @@ SketchPlugins
 
 A git repo containing various plugins for [Sketch](http://bohemiancoding.com/sketch/).
 
-- - -
+### Text
+Variety of plugins for working with text layers
+
+* __Text to Uppercase__: takes a text layer and uppercases it.
 
 ### Align
 Allows you to align layers inside another layer. This doesn't move the bottom selected layer, and is a better implementation I believe that how Sketch handles this currently (where they average the position of all selected layers).
