@@ -1,0 +1,18 @@
+// (cmd control option e)
+
+// Get the frame for the current page, add padding, slice it
+var frame = [[doc currentPage] contentBounds]
+[frame expandBy:100]
+var slice = frame
+
+// Get the path and name of the file
+var fileDisplayName = [doc displayName]
+var currentFilePath = [[doc fileURL] path]
+var fileFolder = currentFilePath.split(fileDisplayName)[0]
+var fileName = fileDisplayName.substring(0, fileDisplayName.indexOf("."));
+
+// Save the page slice to the same directory as a PNG
+var fullPath = fileFolder + fileName + ".png"
+[doc saveArtboardOrSlice:slice toFile:fullPath];
+[doc showMessage:"Saved as /" + fileName + ".png"]
+

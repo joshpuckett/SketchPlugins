@@ -1,0 +1,10 @@
+if([selection count] == 0){
+  [doc showMessage:"Please select a text layers"]
+} else {
+	for (var i = 0; i < [selection count]; i++) {
+	  var textLayer = [selection objectAtIndex:i]
+	  if([textLayer class] === MSTextLayer){
+	    [textLayer setStringValue:([textLayer stringValue].toUpperCase())]
+	  }
+	}
+}
