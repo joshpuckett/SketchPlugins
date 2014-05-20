@@ -3,6 +3,25 @@ SketchPlugins
 
 A git repo containing various plugins for [Sketch](http://bohemiancoding.com/sketch/).
 
+## Installing and Updating
+You can install these pretty easily just by cloning the Git repo:
+
+```
+$ cd ~/Library/Containers/com.bohemiancoding.sketch3/Data/Library/Application\ Support/com.bohemiancoding.sketch3/Plugins
+$ git clone https://github.com/joshpuckett/SketchPlugins.git Puckins
+```
+
+Where “Puckins” is the name of the folder you want the plugins to live inside. They’ll also appear under that group in the Plugins menu in Sketch.
+
+Updating is easy too!
+
+```
+$ cd ~/Library/Containers/com.bohemiancoding.sketch3/Data/Library/Application\ Support/com.bohemiancoding.sketch3/Plugins
+$ git pull
+```
+
+## Included Plugins
+
 ### Text
 Variety of plugins for working with text layers
 
@@ -25,4 +44,4 @@ Handy is a plugin that makes working with guides easier in Sketch. It includes t
 * __Add Guide__ (cmd shift option g): lets you add a vertical or horizontal guide at any point, for example 'v,100' adds a vertical guide at 100px. You can also pass multiple, space-separated values ('v,100 h,200').
 * __Remove Guides__ (cmd shift option r): removes all guides across your artboards.
 
-Note you need Rulers turned on (Control R) to see guides 
+Note you need Rulers turned on (Control R) to see guides
