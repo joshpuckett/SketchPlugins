@@ -15,3 +15,4 @@ var fileName = fileDisplayName.substring(0, fileDisplayName.indexOf("."));
 var fullPath = fileFolder + fileName + ".png"
 [doc saveArtboardOrSlice:slice toFile:fullPath];
 [doc showMessage:"Saved as /" + fileName + ".png"]
+
