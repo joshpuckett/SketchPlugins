@@ -9,7 +9,10 @@ var slice = frame
 var fileDisplayName = [doc displayName]
 var currentFilePath = [[doc fileURL] path]
 var fileFolder = currentFilePath.split(fileDisplayName)[0]
-var fileName = fileDisplayName.substring(0, fileDisplayName.indexOf("."));
+
+// Add current page name to filename
+var thisPage = [doc currentPage]
+var fileName = [doc displayName] +" - "+ [thisPage name]
 
 // Save the page slice to the same directory as a PNG
 var fullPath = fileFolder + fileName + ".png"
