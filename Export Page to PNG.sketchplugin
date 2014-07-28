@@ -1,0 +1,36 @@
+// (cmd control option e)
+#import 'Export-Page/sandbox.js'
+
+// Get the frame for the current page, add padding, slice it
+var frame = [[doc currentPage] contentBounds];
+[frame expandBy:100];
+var slice = frame;
+
+// Get the path and name of the file
+var fileDisplayName = [doc displayName];
+var currentFilePath = [[doc fileURL] path];
+var fileFolder = currentFilePath.split(fileDisplayName)[0];
+var fileName = fileDisplayName.substring(0, fileDisplayName.indexOf("."));
+
+// Save the page slice to the same directory as a PNG
+var fullPath = fileFolder + fileName + ".png";
+
+function in_sandbox(){
+  var environ = [[NSProcessInfo processInfo] environment];
+  return (nil != [environ objectForKey:@"APP_SANDBOX_CONTAINER_ID"]);
+}
+
+if(in_sandbox()) {
+  var sandboxAccess = AppSandboxFileAccess.init({
+    message: "Please authorize Sketch to write to this folder. You will only need to do this once per folder.",
+    prompt:  "Authorize",
+    title: "Sketch Authorization"
+  });
+  sandboxAccess.accessFilePath_withBlock_persistPermission(fullPath, function(){
+    [doc saveArtboardOrSlice:slice toFile:fullPath];
+  }, true);
+} else {
+  [doc saveArtboardOrSlice:slice toFile:fullPath];
+}
+[doc showMessage:"Saved as ./" + fileName + ".png"];
+

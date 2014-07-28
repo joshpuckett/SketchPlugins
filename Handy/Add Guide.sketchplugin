@@ -1,0 +1,34 @@
+//(cmd shift option g)
+var artboard = [[[doc currentPage] artboards] firstObject];
+var app = [NSApplication sharedApplication];
+
+if (!artboard) {
+		[app displayDialog:"Please create an artboard in order to add guides" withTitle:"Couldn't add guide"]
+} else {
+	var getGuide = [doc askForUserInput:"Add a new guide, using v or h for orientation" initialValue:"v,100"]
+
+	// Get all passed values
+	guides = getGuide.split(" ")
+
+	for(var i = 0; i < guides.length; i++) {
+		// Grab current guide values
+		guide = guides[ i ].split(",")
+
+		var guideOrientation = guide[0]
+		var guidePosition = guide[1]
+
+		if (guideOrientation == "v") {
+
+			[[artboard verticalRulerData] addGuideWithValue:guidePosition]
+
+		} else if (guideOrientation == "h") {
+
+			[[artboard horizontalRulerData] addGuideWithValue:guidePosition]
+
+		} else {
+
+			[app displayDialog:"Please make sure you add guides by using v or h for orientation, followed by the position. For example, 'v,100'." withTitle:"Couldn't add guide"]
+
+		}
+	}
+}
