@@ -1,5 +1,5 @@
 // (cmd shift option r)
-var artboard = [[[doc currentPage] artboards] firstObject];
+var artboard = [[doc currentPage] currentArtboard];
 horizontalGuideCount = [[artboard horizontalRulerData] numberOfGuides]
 verticalGuideCount = [[artboard verticalRulerData] numberOfGuides]
 
