@@ -15,7 +15,8 @@ if (!artboard) {
 		guide = guides[ i ].split(",")
 
 		var guideOrientation = guide[0]
-		var guidePosition = guide[1]
+		var expression = [NSExpression expressionWithFormat:guide[1]]
+		var guidePosition = [expression expressionValueWithObject:nil context:nil]
 
 		if (guideOrientation == "v") {
 
