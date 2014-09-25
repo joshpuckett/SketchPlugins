@@ -21,8 +21,18 @@ if (!artboard) {
 
 			[[artboard verticalRulerData] addGuideWithValue:guidePosition]
 
+		} else if (guideOrientation == "-v") {
+
+			guidePosition = [[artboard frame] height] - guidePosition
+			[[artboard verticalRulerData] addGuideWithValue:guidePosition]			
+
 		} else if (guideOrientation == "h") {
 
+			[[artboard horizontalRulerData] addGuideWithValue:guidePosition]
+
+		} else if (guideOrientation == "-h") {
+
+			guidePosition = [[artboard frame] width] - guidePosition
 			[[artboard horizontalRulerData] addGuideWithValue:guidePosition]
 
 		} else {
