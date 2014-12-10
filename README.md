@@ -22,6 +22,14 @@ $ git pull
 
 ## Included Plugins
 
+### Layers
+Plugins to work with layers
+
+* __Snap to Pixel__ (cmd shift option p): select layer(s), run it, and it snaps the width, height, x and y to the nearest integer. Useful after transforming layers.
+![Snap to Pixel](https://dl.dropboxusercontent.com/u/144234624/Sketch/snapToPixel.gif)
+
+
+
 ### Text
 Variety of plugins for working with text layers
 
