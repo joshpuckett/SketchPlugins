@@ -1,0 +1,30 @@
+// (cmd option control p)
+function toInt(number){ 
+  return Math.round(number)  
+}
+
+if([selection count] == 0){
+  [doc showMessage:"Please select a layer!"]
+} else {
+	for (var i=1; i < [selection count]; i++){
+		layer = [selection objectAtIndex:i]
+	  frame = [layer frame]
+		frameWidth = [frame width]
+		frameHeight = [frame height]
+		frameX = [frame x]
+		frameY = [frame y]
+
+		if (frameWidth % 1 !== 0) {
+			[frame setWidth:toInt(frameWidth)]
+		}
+		if (frameHeight % 1 !== 0) {
+			[frame setHeight:toInt(frameHeight)]
+		}
+		if (frameX % 1 !== 0) {
+			[frame setX:toInt(frameX)]
+		}
+		if (frameY % 1 !== 0) {
+			[frame setY:toInt(frameY)]
+		}
+	}
+}
