@@ -6,25 +6,25 @@ function toInt(number){
 if([selection count] == 0){
   [doc showMessage:"Please select a layer!"]
 } else {
-	for (var i=1; i < [selection count]; i++){
+	for (var i=0; i < [selection count]; i++){
 		layer = [selection objectAtIndex:i]
-	  frame = [layer frame]
-		frameWidth = [frame width]
-		frameHeight = [frame height]
-		frameX = [frame x]
-		frameY = [frame y]
+	  layerFrame = [layer frame]
+		frameWidth = [layerFrame width]
+		frameHeight = [layerFrame height]
+		frameX = [layerFrame x]
+		frameY = [layerFrame y]
 
 		if (frameWidth % 1 !== 0) {
-			[frame setWidth:toInt(frameWidth)]
+			[layerFrame setWidth:toInt(frameWidth)]
 		}
 		if (frameHeight % 1 !== 0) {
-			[frame setHeight:toInt(frameHeight)]
+			[layerFrame setHeight:toInt(frameHeight)]
 		}
 		if (frameX % 1 !== 0) {
-			[frame setX:toInt(frameX)]
+			[layerFrame setX:toInt(frameX)]
 		}
 		if (frameY % 1 !== 0) {
-			[frame setY:toInt(frameY)]
+			[layerFrame setY:toInt(frameY)]
 		}
 	}
 }
