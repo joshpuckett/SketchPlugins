@@ -1,0 +1,15 @@
+//Copies the sum of select number layers to clipboard (cmd + alt + control + s)
+var selection = context.selection
+var sum = 0
+for (var i=0; i < selection.count(); i++){
+	var layer = selection[i]
+	var value = [layer stringValue];
+	var number = value.match(/\d/g);
+	number = number.join("");
+	sum += Number(number)
+}
+var sumString = sum.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+var pasteBoard = NSPasteboard.generalPasteboard();  
+pasteBoard.clearContents()
+pasteBoard.writeObjects([sumString]);
+
