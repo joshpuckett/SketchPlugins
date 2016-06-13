@@ -22,18 +22,17 @@ $ git pull
 
 ## Included Plugins
 
+### Text
+Variety of plugins for working with text layers
+
+* __Text to Uppercase__: takes a text layer and uppercases it.
+* __Sum Numbers__: sums the numbers in selected text layers and copies the total to the clipboard (works with currency symbols, commas too)
+
 ### Layers
 Plugins to work with layers
 
 * __Snap to Pixel__ (cmd shift option p): select layer(s), run it, and it snaps the width, height, x and y to the nearest integer. Useful after transforming layers.
 ![Snap to Pixel](https://dl.dropboxusercontent.com/u/144234624/Sketch/snapToPixel.gif)
-
-
-
-### Text
-Variety of plugins for working with text layers
-
-* __Text to Uppercase__: takes a text layer and uppercases it.
 
 ### Align
 Allows you to align layers inside another layer. This doesn't move the bottom selected layer, and is a better implementation I believe that how Sketch handles this currently (where they average the position of all selected layers).
